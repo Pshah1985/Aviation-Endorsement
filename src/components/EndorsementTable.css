@@ -1,0 +1,28 @@
+.endorsement-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.endorsement-table th,
+.endorsement-table td {
+  border: 1px solid #d9dde3;
+  padding: 10px 12px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.endorsement-table th {
+  background: #f3f5f8;
+  font-weight: 600;
+}
+
+.table-link {
+  border: 0;
+  background: transparent;
+  color: #0070d2;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 14px;
+}

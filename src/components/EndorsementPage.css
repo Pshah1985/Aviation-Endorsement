@@ -1,0 +1,33 @@
+.endorsement-page {
+  padding: 24px;
+  background: #ffffff;
+  color: #1f2937;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.endorsement-page h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.info-bar {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #4b5563;
+}
+
+.info-bar span + span::before {
+  content: '|';
+  margin-right: 10px;
+  color: #9ca3af;
+}
+
+.grid-section {
+  margin-top: 20px;
+}
