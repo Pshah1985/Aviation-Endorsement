@@ -124,20 +124,6 @@ function EndorsementPage() {
         </div>
       </header>
 
-      <EndorsementFilters
-        coveragePart={selectedCoveragePart}
-        coverageParts={coverageParts}
-        onCoveragePartChange={handleCoveragePartChange}
-        category={selectedCategory}
-        categories={endorsementCategories}
-        onCategoryChange={handleCategoryChange}
-        endorsementSelection={selectedFormNumber}
-        endorsementOptions={endorsementSelectionOptions}
-        onEndorsementSelectionChange={setSelectedFormNumber}
-        onAddEndorsement={handleAddEndorsement}
-        showDependentFilters={showDependentFilters}
-      />
-
       {hasGrid && (
         <section className="grid-section" aria-label="Endorsements grid">
           <EndorsementTable rows={paginatedRows} onDetail={setDetailRow} onDelete={handleDelete} />
@@ -152,6 +138,20 @@ function EndorsementPage() {
           />
         </section>
       )}
+
+      <EndorsementFilters
+        coveragePart={selectedCoveragePart}
+        coverageParts={coverageParts}
+        onCoveragePartChange={handleCoveragePartChange}
+        category={selectedCategory}
+        categories={endorsementCategories}
+        onCategoryChange={handleCategoryChange}
+        endorsementSelection={selectedFormNumber}
+        endorsementOptions={endorsementSelectionOptions}
+        onEndorsementSelectionChange={setSelectedFormNumber}
+        onAddEndorsement={handleAddEndorsement}
+        showDependentFilters={showDependentFilters}
+      />
 
       <DetailModal row={detailRow} onClose={() => setDetailRow(null)} />
     </main>
