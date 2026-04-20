@@ -1,0 +1,49 @@
+.detail-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: grid;
+  place-items: center;
+  z-index: 1000;
+}
+
+.detail-modal {
+  background: #fff;
+  border-radius: 6px;
+  width: min(520px, calc(100% - 32px));
+  padding: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.detail-modal h2 {
+  margin: 0 0 14px;
+  font-size: 20px;
+}
+
+.detail-modal dl {
+  margin: 0 0 16px;
+  display: grid;
+  gap: 10px;
+}
+
+.detail-modal dl div {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 8px;
+}
+
+.detail-modal dt {
+  font-weight: 600;
+}
+
+.detail-modal dd {
+  margin: 0;
+}
+
+.detail-modal button {
+  border: 1px solid #c3c9d1;
+  border-radius: 4px;
+  background: #fff;
+  padding: 7px 14px;
+  cursor: pointer;
+}

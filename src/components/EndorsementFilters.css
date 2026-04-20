@@ -1,0 +1,43 @@
+.endorsement-filters {
+  display: grid;
+  gap: 12px;
+  max-width: 620px;
+}
+
+.filter-row {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+}
+
+.filter-row label {
+  font-weight: 600;
+  color: #2f2f2f;
+}
+
+.filter-row select {
+  height: 34px;
+  border: 1px solid #cfcfcf;
+  border-radius: 4px;
+  padding: 0 8px;
+  background: #fff;
+}
+
+.filter-actions {
+  margin-top: 4px;
+}
+
+.filter-actions button {
+  background: #0070d2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  height: 34px;
+  padding: 0 14px;
+  cursor: pointer;
+}
+
+.filter-actions button:hover {
+  background: #005fb2;
+}
