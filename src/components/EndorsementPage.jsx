@@ -110,6 +110,12 @@ function EndorsementPage() {
 
   const hasGrid = rows.length > 0
   const showDependentFilters = selectedCoveragePart !== 'Select'
+  const atFirstPage = currentPage === 1 || rows.length === 0
+  const atLastPage = currentPage === totalPages || rows.length === 0
+
+  const onPageChange = (nextPage) => {
+    setCurrentPage(Math.min(totalPages, Math.max(1, nextPage)))
+  }
 
   const startResult = hasGrid ? (currentPage - 1) * PAGE_SIZE + 1 : 0
   const endResult = hasGrid ? startResult + paginatedRows.length - 1 : 0
@@ -155,6 +161,25 @@ function EndorsementPage() {
       />
 
       <DetailModal row={detailRow} onClose={() => setDetailRow(null)} />
+
+      <div className="page-nav-buttons">
+        <button
+          type="button"
+          className="page-nav-btn"
+          onClick={() => onPageChange(currentPage - 1)}
+          disabled={atFirstPage}
+        >
+          Previous
+        </button>
+        <button
+          type="button"
+          className="page-nav-btn"
+          onClick={() => onPageChange(currentPage + 1)}
+          disabled={atLastPage}
+        >
+          Next
+        </button>
+      </div>
     </main>
   )
 }
