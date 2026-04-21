@@ -8,6 +8,7 @@ function EndorsementTable({ rows, onDetail, onDelete }) {
           <th>Form Number</th>
           <th>Form Name</th>
           <th>Coverage Part</th>
+          <th>Aircraft Association</th>
           <th>Exclusion</th>
           <th>Detail</th>
           <th>Delete</th>
@@ -19,6 +20,7 @@ function EndorsementTable({ rows, onDetail, onDelete }) {
             <td>{row.formNumber}</td>
             <td>{row.formName}</td>
             <td>{row.coveragePart}</td>
+            <td>{row.aircraftAssociation || ''}</td>
             <td>{row.exclusion ? 'X' : ''}</td>
             <td>
               <button type="button" className="table-link" onClick={() => onDetail(row)}>
