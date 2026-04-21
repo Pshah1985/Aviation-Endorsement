@@ -31,3 +31,30 @@
 .grid-section {
   margin-top: 20px;
 }
+
+.page-nav-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+  justify-content: flex-end;
+}
+
+.page-nav-btn {
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.page-nav-btn:disabled {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+}
+
+.page-nav-btn:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
