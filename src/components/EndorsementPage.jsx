@@ -110,8 +110,6 @@ function EndorsementPage() {
 
   const hasGrid = rows.length > 0
   const showDependentFilters = selectedCoveragePart !== 'Select'
-  const atFirstPage = currentPage === 1 || rows.length === 0
-  const atLastPage = currentPage === totalPages || rows.length === 0
 
   const onPageChange = (nextPage) => {
     setCurrentPage(Math.min(totalPages, Math.max(1, nextPage)))
@@ -121,7 +119,7 @@ function EndorsementPage() {
   const endResult = hasGrid ? startResult + paginatedRows.length - 1 : 0
 
   return (
-    <main className="endorsement-page">
+    <main className="endorsement-page"> 
       <header>
         <h1>Endorsement</h1>
         <div className="info-bar" aria-label="Policy Info">
@@ -167,7 +165,6 @@ function EndorsementPage() {
           type="button"
           className="page-nav-btn"
           onClick={() => onPageChange(currentPage - 1)}
-          disabled={atFirstPage}
         >
           Previous
         </button>
@@ -175,7 +172,6 @@ function EndorsementPage() {
           type="button"
           className="page-nav-btn"
           onClick={() => onPageChange(currentPage + 1)}
-          disabled={atLastPage}
         >
           Next
         </button>
