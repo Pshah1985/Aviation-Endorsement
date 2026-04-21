@@ -73,6 +73,7 @@ function EndorsementPage() {
           formName: selectedForm.formName,
           coveragePart: selectedCoveragePart,
           endorsementCategory: selectedCategory,
+          aircraftAssociation: '',
           exclusion: selectedCategory === 'Exclusion',
         },
       ]
