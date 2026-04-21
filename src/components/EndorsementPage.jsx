@@ -110,7 +110,7 @@ function EndorsementPage() {
 
   const hasGrid = rows.length > 0
   const showDependentFilters = selectedCoveragePart !== 'Select'
-  const atFirstPage = currentPage === 1 || rows.length === 0
+  const atFirstPage = currentPage === 1
   const atLastPage = currentPage === totalPages || rows.length === 0
 
   const onPageChange = (nextPage) => {
